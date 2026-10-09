@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>安心お金の整理ノート | 失敗から学ぶ資産形成の記録</title>
+<meta name="description" content="投資の失敗と、積立に切り替えるまでの体験記録。広告なし・商品の勧誘なしの個人サイトです。">
+<style>
+:root{
+  --paper:#eef3f5; --sheet:#fcfdfd; --ink:#1d2b45; --muted:#56637a;
+  --line:#d3dde3; --accent:#2b7a6b; --note:#f4ecc8;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{
+  margin:0; color:var(--ink); background-color:var(--paper);
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:28px 28px;
+  font-family:"Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  line-height:1.9; font-size:1rem;
+}
+.sheet{max-width:42rem; margin:0 auto; background:var(--sheet);
+  padding:1.5rem 1.25rem 2.5rem; min-height:100vh;
+  border-left:1px solid var(--line); border-right:1px solid var(--line)}
+header{display:flex; flex-wrap:wrap; justify-content:space-between; gap:.5rem 1.5rem;
+  align-items:baseline; padding-bottom:1rem; border-bottom:2px solid var(--ink)}
+.brand{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; font-weight:700; font-size:1.2rem}
+nav a{color:var(--ink); margin-right:1rem; text-decoration:none; border-bottom:1px solid var(--accent)}
+nav a:last-child{margin-right:0}
+a:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+h1,h2{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; line-height:1.5}
+h1{font-size:1.7rem; margin:2.5rem 0 1rem}
+h2{font-size:1.25rem; margin:0 0 .75rem; padding-left:.7rem; border-left:4px solid var(--accent)}
+section{margin-top:2.75rem}
+p{margin:0 0 1rem}
+.memo{background:var(--note); padding:.9rem 1.1rem; border-radius:2px; margin:1.5rem 0 0}
+.memo p{margin:0}
+.quote{margin:0 0 1.1rem; padding-left:1rem; border-left:4px solid var(--line);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif; font-size:1.05rem; line-height:1.8}
+.mine{margin:-.5rem 0 1.6rem; padding-left:1rem}
+.src{display:block; font-family:"Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  font-size:.85rem; color:var(--muted); margin-top:.2rem}
+.stance{margin:1.5rem 0 0; padding-left:1rem; border-left:4px solid var(--accent);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif; font-size:1.1rem; line-height:1.9}
+ul.plain{margin:0; padding-left:1.2rem}
+ul.plain li{margin-bottom:.4rem}
+.entries{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.entries li{display:flex; justify-content:space-between; gap:1rem; align-items:baseline;
+  padding:.8rem 0; border-bottom:1px solid var(--line)}
+.status{flex:none; font-size:.85rem; color:var(--muted); border:1px solid var(--line); padding:0 .6rem; border-radius:1rem}
+details{border:1px solid var(--ink); border-radius:2px; background:var(--sheet)}
+summary{cursor:pointer; list-style:none; display:flex; align-items:baseline; gap:.9rem; padding:.9rem 1.1rem}
+.phases details{margin-bottom:.6rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+"; margin-left:auto; font-size:1.3rem; line-height:1}
+details[open] summary::after{content:"−"}
+summary:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+.sum-title{font-family:"Hiragino Mincho ProN","Yu Mincho",serif; font-size:1.25rem; font-weight:700}
+.sum-sub{font-size:.9rem; color:var(--muted)}
+.detail-body{padding:1rem 1.1rem 1.1rem; border-top:1px solid var(--line)}
+.entries li.has-details{display:block; padding:.6rem 0}
+.entries .sum-title{font-size:1.05rem}
+.btn{display:inline-block; padding:.7rem 1.3rem; background:var(--ink); color:#fff; text-decoration:none; border-radius:2px; font-weight:700}
+.btn:hover{background:var(--accent)}
+.btn:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
+.note{font-size:.88rem; color:var(--muted)}
+footer{margin-top:3.5rem; padding-top:1rem; border-top:1px solid var(--line); font-size:.88rem; color:var(--muted)}
+footer p{margin:0 0 .5rem}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header>
+    <span class="brand">安心お金の整理ノート</span>
+    <nav aria-label="ページ内メニュー">
+      <a href="#articles">記事</a>
+      <a href="#phases">時期別</a>
+      <a href="#values">原点</a>
+      <a href="#about">このサイトについて</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>教科書通りの失敗を繰り返した、投資の記録です。</h1>
+    <p>投資で失敗した経験と、そこから積立に切り替えるまでを書いていきます。取り崩しを意識する年代の方や、同じ悩みを持つ方と、情報交換できればうれしいです。</p>
+    <p class="stance">誰かと競うためではなく、昨日の自分より少し上手くなるために。お金も人生も、そんな姿勢で書いています。</p>
+    <div class="memo">
+      <p>広告は載せません。金融商品の勧誘もしません。資産の金額も公開しません。</p>
+    </div>
+
+    <section id="articles">
+      <h2>記事</h2>
+      <p>3本の記事を公開しています。</p>
+      <ul class="entries">
+        <li class="has-details">
+          <details>
+            <summary><span class="sum-title">「また安く買える」と待ち続けて、機会を逃した話</span></summary>
+            <div class="detail-body">
+              <p>暴落を予想したら、それが見事に当たって、底値近くで買うことができました。うれしい成功体験でした。</p>
+              <p>ところが、この成功体験が、あだになりました。「また安く買える」と思い込んで、待ち続けるようになったのです。</p>
+              <p>成功体験のあと、僕はニュースを自分なりに整理して、相場を予測するようになりました。過去に当てたことがあるので、予測には確信がありました。</p>
+              <p>そして、この確信がくせ者でした。確信があるほど、新しい情報を「やっぱり予測どおりだ」と受け取ってしまい、待つという判断を変えられなくなったのです。こうした「過信」は、行動経済学でもよく知られた落とし穴だそうです。</p>
+              <p>結局、2年近く、ほとんど安く買えないまま過ぎました。その間、心も体も疲れました。そして年の終わりには、結局、高値で買うことになりました。最悪のかたちでした。</p>
+              <p>一度当たったからといって、次も当たるとは限りません。待っているあいだは、何も起きていないように見えますが、本当は、買えたはずの時間を失っています。</p>
+              <p>いまは、待つのをやめて、決まった額を淡々と積み立てています。気持ちが、驚くほど楽になりました。</p>
+            </div>
+          </details>
+        </li>
+        <li class="has-details">
+          <details>
+            <summary><span class="sum-title">トリガー戦略をやめて、積立にした理由</span></summary>
+            <div class="detail-body">
+              <p>「安値で買えば、絶対に儲かる」。暴落を当てた確信があった僕は、そう考えていました。だから、「大きく下がったら買う」という条件(トリガー)を決めて、その日が来るまで、待ち続けました。</p>
+              <p>でも、2年近くたっても、思うような結果は出ませんでした。そこで、AIを使って、毎月同じ額を買う積立(ドルコスト平均法)と、トリガー方式、その両方を組み合わせた方法を、いろいろな相場の条件でシミュレーションしてみました。</p>
+              <p>結果には、唖然としました。僕が試した条件では、トリガー方式は、リスクが大きいわりに、リターンはたいしたことがなかったのです。普通の相場では、積立との差はわずかで、暴落が長引く場合には、むしろ不利になりました。</p>
+              <p>そこで、積立に戻しました。決まった額を淡々と積み立てるだけの、いちばん地味な方法ですが、迷う時間がなくなり、気持ちが楽になりました。</p>
+              <p>ただし、これは僕が試した条件での結果です。前提を変えれば、結果は変わるかもしれません。</p>
+            </div>
+          </details>
+        </li>
+        <li class="has-details">
+          <details>
+            <summary><span class="sum-title">「15年持てば安全」を検算してみた</span></summary>
+            <div class="detail-body">
+              <p>積立で行くと決めて、トリガー方式もやめて、大筋は固まりました。それでも、怖かったのは、使い始めてからの暴落です。もし、取り崩しを始めた直後に、いちばん最悪のタイミングで暴落が来たら、どうなるのか。</p>
+              <p>「何年あれば回復するのか」を知りたくて、逆算してみました。</p>
+              <p>AIが書いた文章には、「過去100年のデータでは、15年以上持てば元本割れはない」とありました。心強い言葉ですが、そのまま信じず、検算しました。</p>
+              <ul class="plain">
+                <li>50%の暴落が来ると、元に戻すには、資産が2倍になる必要があります。年5%なら約14年、年7%なら約10年かかる計算です。</li>
+                <li>「過去100年」は、ほぼアメリカの話です。日経平均は、1989年末の高値を超えるまでに、約34年かかりました。</li>
+                <li>リーマンショックでは、S&amp;P500が高値を更新するまで、約5年半でした。ただし、これは高値で一括投資をして、配当を含まない場合の数字です。</li>
+              </ul>
+              <p style="margin-top:1rem">だから、「15年持てば安全」とは言い切れません。それでも、「最低でも15年は耐えられる備えを持つ」ことは、自分への保険になると考えました。15年は、あくまで僕の目安で、保証ではありません。</p>
+              <p>これらを踏まえると、無理のない範囲で、ペースを落としてでも仕事を続けられれば、続けたほうが、心も体も安定するのではないかと思います。</p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <section id="phases">
+      <h2>時期別 NISAの使い方</h2>
+      <p>年齢ではなく、積み立ての時期ごとに、体験と考えを整理していきます。書けた時期から順に公開します。</p>
+      <div class="phases">
+        <details>
+          <summary><span class="sum-title">始める前</span></summary>
+          <div class="detail-body">
+            <p>投資を始める前の僕は、失敗談のオンパレードでした。高い車を高い金利のローンで買い、収入のほとんどを、マリンスポーツなどの遊びに使って、貯金はゼロ。お金は、右から左へ消えていきました。</p>
+            <p>おかしいと気づいたきっかけは、ローンを払い終えたときに届いた、一枚のハガキでした。これまでに払った総額が書かれていて、それを見たとき、天地がひっくり返るほど驚きました。</p>
+            <p>それからは、お金に対する考え方が、すべて変わりました。生活設計も、お金の使い方も一から考え直して、できるだけ貯金していく方向へ、180度変わりました。</p>
+            <p>ローンの総額に驚いたのと同じで、投資でも、コストは目に見えにくいのに、長く続けるほど効いてきます。選ぶときは、次の2点を見ています。</p>
+            <ul class="plain">
+              <li>運用商品の保有コスト(信託報酬)。低いほど、長期では有利です。</li>
+              <li>証券会社の為替手数料などのコスト。NISAでは、口座管理料や売買手数料は無料が主流なので、差が出るのは、このあたりです。</li>
+            </ul>
+            <p style="margin-top:1rem">最新の条件は、各社の公式サイトで確認してください。</p>
+          </div>
+        </details>
+        <details>
+          <summary><span class="sum-title">始めた頃</span></summary>
+          <div class="detail-body">
+            <p>僕が投資を始めたのは、NISAがまだなく、iDeCoだけの頃でした。そのころから、暮らしをできるだけシンプルにして、無理のない範囲で積み立てていました。</p>
+            <p>始めた頃から、何歳まで働いて、そのときにだいたいいくらぐらいになるかを、しょっちゅうシミュレーションしていました。</p>
+            <p>大きな失敗はありませんでした。強いて言えば、王道のS&amp;P500ではなく、バンガードの全米株式のインデックスを選んだことです。二つの値動きはとても近いので、どちらを選んでも大差はないと、いまは思っています。</p>
+          </div>
+        </details>
+        <details>
+          <summary><span class="sum-title">続けている間</span><span class="sum-sub">続きを準備中</span></summary>
+          <div class="detail-body">
+            <p>暴落との向き合い方は、バケツ戦略で決めています。バケツ戦略とは、お金を「使う時期」ごとに分けて置いておく考え方です。</p>
+            <p>以前は、株は10年持てば大丈夫だと思っていました。でも、S&amp;P500の歴史を見ていくうちに、最低でも15年は持てないと安心できない、と考えるようになりました。ただし、15年はあくまで僕の目安で、保証ではありません。</p>
+            <p>だから、株が15年低迷しても、慌てて売らずに耐えられることを基準に、バケツを考えています。そのバケツは、いつでも動かせる定期預金や、個人向け国債に預けています。それに加えて、仕事を続けて収入があることも、バケツのひとつと考えています。</p>
+            <p>ポートフォリオでも、少し遠回りをしました。ナスダック100を20%入れる設計にして、2か月分ほど買ってしまったのです。その後、15年持てるかを考えたことと、S&amp;P500が時価総額の大きな会社ほど比重が大きく、ハイテク株の影響が大きいと知ったことから、見直しました。</p>
+            <p>積立の設定をしたあとは、基本的に放置で構いません。ただ、1年に1回か2回は、AIを使って、前提を自分でも確かめながら、資産の状況をシミュレーションしてみるといいと思います。</p>
+            <p>もうひとつ大事なのは、終わりに向けたロードマップです。仕事はいつまで続けるのか、いつから取り崩すのか、いくらずつ取り崩すのか。退職後のプランまで、きちんと考えておくことが、すごく大事だと思います。</p>
+          </div>
+        </details>
+        <details>
+          <summary><span class="sum-title">使う段階</span><span class="sum-sub">続きを準備中</span></summary>
+          <div class="detail-body"><p>できれば仕事は、ペースを落としながらでも続けていたほうがいいのではないかと、僕は考えています。収入があれば、暴落したときでも、慌てて株を売って損を確定させてしまうことが、なくなるからです。</p>
+            <p>取り崩しの順番は、そのときの相場の状態で変えるつもりです。</p>
+            <ul class="plain">
+              <li>順調に伸びているときは、値上がりした株から、必要な分を売ります。</li>
+              <li>急に暴落したときは、株は売らずに、現金や国債から使います。</li>
+              <li>下落が長引くときは、現金と国債を使いながら、仕事の収入と支出の調整で乗り切ります。</li>
+            </ul>
+            <p style="margin-top:1rem">相場が回復したら、使った分のバケツを、少しずつ補充します。</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="values">
+      <details>
+      <summary><span class="sum-title">原点</span><span class="sum-sub">気づきと、大切にしていること</span></summary>
+      <div class="detail-body">
+      <p>投資や仕事を続けてきて、いま大切にしていることを書きます。</p>
+      <p>ほどほど、腹八分目を知ること。投資でも趣味でも、一番を取りにいくより、続けられる量とペースを守るほうが、結果として遠くまで行けると感じています。</p>
+      <p>投資は、自分で考えて、自分の責任で行うことが大前提です。誰かに言われたから、ネットで話題になっているから、というのは判断材料として見るのはよいですが、僕の場合は、反対の材料をぶつけて整合性を取るように、常に心がけています。最終的には自分でしっかり考え、シミュレーションを重ねて、自分の責任で決めることです。AIとシミュレーションを重ねてみるのも、とても意味のあることだと僕は思っています。</p>
+      <p class="quote">過ぎたるは猶及ばざるが如し。<span class="src">孔子『論語』先進篇</span></p>
+      <p class="mine">僕の場合、完璧なポートフォリオを目指して、仕組みを複雑にしすぎた時期がありました。</p>
+      <p class="quote">足るを知る者は富む。<span class="src">老子</span></p>
+      <p class="mine">僕の場合、最初の成功体験があだになり、「また安く買える」と待ち続けて、機会を逃しました。</p>
+      <p class="quote">大きな投資家も小さな投資家も、低コストのインデックスファンドを持ち続けるのがよい。<span class="src">ウォーレン・バフェット、バークシャー・ハサウェイ2016年分の株主への手紙(要旨)</span></p>
+      <p class="mine">僕の場合、条件で買い増すルールも試しましたが、試算すると普通の積立のほうが不利になりにくいと分かり、シンプルな積立に切り替えました。</p>
+      </div>
+      </details>
+    </section>
+
+    <section id="equation">
+      <details>
+        <summary><span class="sum-title">落ち込んでる僕に神様がくれた幸せの方程式</span></summary>
+        <div class="detail-body">
+          <p>見つけたというより、気づいたら、そうなっていました。生活を削って、浮いたお金を投資に回していたら、それが「方程式」として成り立っていたのです。</p>
+          <p>「月1万円をケチっても、何にもならない」と思っている人は、多いと思います。でも、月1万円の節約には、二つの効果があります。</p>
+          <ul class="plain">
+            <li>使わなくなった分、支出が減ります。市場に左右されず、始めた月から効きます。</li>
+            <li>その1万円を毎月投資に回すと、運用の分が上乗せされます。</li>
+          </ul>
+          <p style="margin-top:1rem">続けた年数で、効果は変わります。年5%で計算すると、次のようになります。</p>
+          <ul class="plain">
+            <li>10年続けると、支出が120万円減り、積み立てた分は約155万円になります。</li>
+            <li>20年続けると、支出が240万円減り、約410万円になります。</li>
+            <li>25年続けると、支出が300万円減り、約600万円になります。</li>
+            <li>45年続けると、支出が540万円減り、約2,000万円になります。</li>
+          </ul>
+          <p style="margin-top:1rem">始めるのが遅いほど、運用の上乗せは小さくなります。それでも、支出が減る効果は、いつ始めても同じです。さらに、取り崩す側になると、生活費が月1万円下がれば、必要な資産も下がります。年12万円は、取り崩し率3〜4%の目安で、約300万〜400万円の資産に相当します。</p>
+          <p>ただし、数字は前提で変わります。45年の場合、運用がゼロなら540万円、年3%なら約1,140万円、年7%なら約3,790万円です。年5%は計算上の仮定で、保証ではありません。また、支出の削減額は物価の上昇を考えていないので、いまのお金に直すと、もっと少なくなります。</p>
+          <p>節約して、投資に回す。このシンプルな繰り返しが、落ち込んでいた僕を、少しずつ支えてくれました。</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="about">
+      <h2>このサイトについて</h2>
+      <p>普通の個人が、失敗しながら投資について考えてきた記録です。自分の資産形成を自分で設計し、その中で起きた失敗と、見直した考え方を残していきます。</p>
+      <p>「インデックス投資の父」と呼ばれるジョン・ボグルは、低コストのインデックスファンドを長く持ち続けることを勧めた人です。銘柄選びやタイミング狙いで遠回りした僕が行き着いたのも、結局は「シンプルに積み立てて続ける」でした。</p>
+      <p>ウォーレン・バフェットは、「プロが選んだヘッジファンドは、低コストのインデックスファンドに10年では勝てない」という賭けをしました。バークシャー・ハサウェイの2016年分の株主への手紙(2017年2月公開)によると、2016年末までの9年間で、インデックスファンドは年平均7.1%、相手が選んだファンドは年平均2.2%でした。ただし、これは1つの賭けの途中経過で、比べた相手もヘッジファンドです。すべての運用に当てはまる結論ではありません。</p>
+      <ul class="plain">
+        <li>書く内容は、個人の体験と考えです。</li>
+        <li>数字を載せるときは、前提と根拠も一緒に書きます。</li>
+        <li>断定できないことは、断定しません。</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p>感想やご質問、情報交換など、お気軽にどうぞ。下のボタンから、お問い合わせフォームが開きます。</p>
+      <p><a class="btn" href="https://docs.google.com/forms/d/1M9G2mw1t8Eo_JJIjaBzd_qvK68S-2sq8GMNaAF15-Mc/viewform" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く</a></p>
+      <p class="note">返信には、お時間をいただくことがあります。電話番号、住所、口座の情報などは、書かないでください。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>このサイトは個人の体験記録です。投資の勧誘や助言ではなく、将来の成果を保証するものでもありません。投資の判断は、ご自身の責任でお願いします。</p>
+    <p>文中に出てくる商品名は、僕自身の事例であり、おすすめするものではありません。</p>
+    <p>© 2026 安心お金の整理ノート</p>
+  </footer>
+</div>
+<script>
+(function(){
+  var d=document.querySelector('#values details');
+  function openIt(){ if(d && location.hash==='#values'){ d.open=true; } }
+  openIt(); window.addEventListener('hashchange',openIt);
+})();
+</script>
+</body>
+</html>
